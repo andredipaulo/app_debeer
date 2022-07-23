@@ -16,5 +16,15 @@
 			$this->$atributo = $valor;
 		}
 
+        public function rules()
+        {
+            return [
+                [['nome', 'sobrenome', 'email', 'senha'], 'required'],
+                // email has to be a valid email address
+                ['email', 'email'],
+                ['senha', 'password'],
+            ];
+        }
+
 	}
  ?>
