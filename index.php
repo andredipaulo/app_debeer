@@ -16,7 +16,7 @@
 
 	<nav class="navbar navbar-dark bg-dark">		
  		<a class="navbar-brand" href="index.php">
-			<img src="img/logo/logo.png" width="50" height="50" class="d-inline-block align-top">
+			<img src="/web/img/logo/logo.png" width="50" height="50" class="d-inline-block align-top">
 			Debeer	
 		</a>		
 	</nav>
