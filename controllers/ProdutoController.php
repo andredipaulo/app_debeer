@@ -1,7 +1,7 @@
 <?php
-    require "../conexao.php";
-    require "Produto.php";
-    require "produto.service.php";
+    require "../config/conexao.php";
+    require "../models/Produto.php";
+    require "../services//ProdutoService.php";
 
     //class ProdutoController{
 

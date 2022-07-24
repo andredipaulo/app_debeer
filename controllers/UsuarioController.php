@@ -1,7 +1,7 @@
 <?php
-    require "../conexao.php";
-	require "usuario.model.php";
-	require "usuario.service.php";
+    require "../config/conexao.php";
+	require "../models/Usuario.php";
+	require "../services/UsuarioService.php";
 
     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
@@ -20,13 +20,8 @@
 
             $existe = $servico->inserir();
 
-            //echo '<pre>';
-            //echo $existe->email;
-            //print_r($existe->email);
-            //echo '</pre>';
-
             if (empty($existe->email)){
-                header('Location: ../menu.php');
+                header('Location: ../web/pagina.php');
             }else{
                 header('Location: ../index.php?registro=existe');
             }
@@ -50,7 +45,7 @@
             $user->email === $usuario->email &&
             $user->senha === $usuario->senha
         ){
-            header('Location: ../menu.php');
+            header('Location: ../web/pagina.php?user='.$user->id);
         }else{
             header('Location: ../index.php?login=erro');
         }

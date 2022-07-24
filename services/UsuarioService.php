@@ -71,6 +71,15 @@
 			return $stmt->execute();					
 		}
 
+		public function getUserById($id){
+            $query =  'select nome, sobrenome, email from tb_usuarios
+				        where id=?';
+            $stmt = $this->conexao->prepare($query);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        }
+
 	}
 
  ?>
